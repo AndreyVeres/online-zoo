@@ -1,0 +1,105 @@
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+body {
+    @extend %Roboto-400;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+
+// .testimonials__box::-webkit-scrollbar {
+//     color: red;
+//     height: 6px;
+//     width: 10;
+// }
+
+// .testimonials__box::-webkit-scrollbar-track {
+    
+  
+// }
+
+// .testimonials__box::-webkit-scrollbar-track::before {
+//     background-color: #fff;
+ 
+// }
+
+
+// .testimonials__box::-webkit-scrollbar-thumb {
+//     background-color: red;
+//     height: 5px;
+//     border-radius: 20px;
+// }
+
+
+.ovalBtn {
+    width: 298px;
+    height: 54px;
+    border-radius: 25px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    padding: 16px 0px;
+    text-align: center;
+    display: block;
+    color: $white;
+    text-transform: uppercase;
+    @extend %Roboto-500;
+}
+
+
+.rectBtn {
+    
+}
+.ovalBtn:hover {
+    background: linear-gradient(113.96deg, #d86f42 1.49%, #da7c11 101.44%);
+}
+
+
+.arrow {
+    position: absolute;
+    z-index: 5;
+    top: calc(50% - 63px);
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+
+}
+
+.arrow:hover svg defs linearGradient stop {
+    stop-color: $green;
+
+}
+
+.arrow__left {
+    left: -75px;
+}
+
+.arrow__right {
+    right: -75px;
+}
+
+
+
+.big__title {
+    font-size: 48px;
+    line-height: 120%;
+}
+
+.h2__title {
+    font-size: 48px;
+    line-height: 120%;
+    @extend %Roboto-400;
+}
+
+.h3__title {
+    font-size: 36px;
+    line-height: 130%;
+    @extend %Roboto-400;
+}
+
+.subtitle {
+    font-size: 24px;
+    line-height: 120%;
+}
