@@ -60,7 +60,7 @@ body {
 .arrow {
     position: absolute;
     z-index: 5;
-    top: calc(50% - 63px);
+    top: calc(50% - 35px);
     cursor: pointer;
     border: 0;
     background: transparent;
@@ -73,11 +73,11 @@ body {
 }
 
 .arrow__left {
-    left: -75px;
+    left: -88px;
 }
 
 .arrow__right {
-    right: -75px;
+    right: -88px;
 }
 
 
