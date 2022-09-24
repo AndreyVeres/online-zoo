@@ -23,7 +23,7 @@ form.addEventListener('submit', (e) => {
 
 //Активные ссылки меню 
 document.querySelectorAll('.header__link-active').forEach(item => {
-    item.addEventListener('click' , (e) => e.preventDefault())
+    item.addEventListener('click', (e) => e.preventDefault())
 })
 
 
@@ -32,9 +32,23 @@ document.querySelectorAll('.header__link-active').forEach(item => {
 
 
 // Максимально количество символов в инпуте 
-const input = document.querySelector('.donate__form-input');
-input.addEventListener('keydown' , () => {
-    if(input.value.length > 3){
-        input.value = input.value.slice(0,3)
-    }
+try{
+    const input = document.querySelector('.donate__form-input');
+    input.addEventListener('keydown', () => {
+        if (input.value.length > 3) {
+            input.value = input.value.slice(0, 3)
+        }
+    })
+}catch{}
+
+
+const arrows = document.querySelectorAll('.arrow')
+arrows.forEach(arrow => {
+    arrow.addEventListener('click' , () => {
+        arrow.classList.add('arrow-active')
+        setTimeout(() => {
+            arrow.classList.remove('arrow-active')
+        }, 1000);
+})
+
 })

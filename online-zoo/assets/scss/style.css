@@ -138,6 +138,13 @@ body {
   background: transparent;
 }
 
+.arrow-active svg circle {
+  fill: green;
+  transform: translate(0) !important;
+  cursor: default;
+  stroke: green;
+}
+
 .arrow__left {
   left: -88px;
 }

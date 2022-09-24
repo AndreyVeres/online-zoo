@@ -66,10 +66,17 @@ body {
 
 }
 
-// .arrow:hover svg defs linearGradient stop {
-//     stop-color: $green;
+.arrow-active svg circle {
+    
+    fill: green;
+    transform: translate(0) !important;
+    cursor: default;
+    stroke: green;
+}
 
-// }
+
+
+
 
 .arrow__left {
     left: -88px;
@@ -131,10 +138,7 @@ body {
     transform: scale(2) translate(-20px, -15px);
 }
 
-.arrow:hover {
- 
 
-}
 
 .arrow__right svg circle {
     transition: all 1s;
