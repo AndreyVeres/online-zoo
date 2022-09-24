@@ -138,10 +138,6 @@ body {
   background: transparent;
 }
 
-.arrow:hover svg defs linearGradient stop {
-  stop-color: #4B9200;
-}
-
 .arrow__left {
   left: -88px;
 }
@@ -178,6 +174,42 @@ body {
 .subtitle {
   font-size: 24px;
   line-height: 120%;
+}
+
+.arrow__left svg circle {
+  transition: all 1s;
+}
+
+.arrow__left svg:hover {
+  transform: translate(4px, 0);
+}
+
+.arrow__left svg:hover circle {
+  transform: translate(68px, 0px);
+}
+
+.arrow__left svg:hover path {
+  stroke: #d86f42;
+  transition: all 1s;
+  transform: scale(2) translate(-20px, -15px);
+}
+
+.arrow__right svg circle {
+  transition: all 1s;
+}
+
+.arrow__right svg:hover {
+  transform: translate(4px, 0);
+}
+
+.arrow__right svg:hover circle {
+  transform: translate(-68px, 0px);
+}
+
+.arrow__right svg:hover path {
+  stroke: #d86f42;
+  transition: all 1s;
+  transform: scale(2) translate(-9px, -15px);
 }
 
 .scale__container {
