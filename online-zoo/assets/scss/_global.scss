@@ -74,10 +74,16 @@ body {
 
 .arrow__left {
     left: -88px;
+    @media (max-width : $desctop) {
+      left: 337px;
+    }
 }
 
 .arrow__right {
     right: -88px;
+    @media (max-width : $desctop) {
+        right: 318px;
+      }
 }
 
 

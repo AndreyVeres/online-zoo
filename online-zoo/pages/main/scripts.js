@@ -21,8 +21,10 @@ form.addEventListener('submit', (e) => {
 
 
 
-
-
+//Активные ссылки меню 
+document.querySelectorAll('.header__link-active').forEach(item => {
+    item.addEventListener('click' , (e) => e.preventDefault())
+})
 
 
 
@@ -31,7 +33,6 @@ form.addEventListener('submit', (e) => {
 
 // Максимально количество символов в инпуте 
 const input = document.querySelector('.donate__form-input');
-
 input.addEventListener('keydown' , () => {
     if(input.value.length > 3){
         input.value = input.value.slice(0,3)

@@ -109,6 +109,10 @@
     width: 100%;
     color: $white;
 
+    @media (max-width : $desctop) {
+        z-index: 99;
+    }
+
     &__logo {
         margin-right: 67px;
         color: $white;
@@ -119,6 +123,10 @@
         justify-content: flex-start;
         align-items: center;
 
+        @media (max-width : $desctop) {
+
+            padding: 0 20px;
+        }
     }
 
     &__menu {
@@ -133,22 +141,31 @@
     }
 
     &__item {
-        padding: 29px 0;
+        padding: 26px 0;
     }
+
+
 
     &__item+.header__item {
         margin-left: 58px;
+
+        @media (max-width : $desctop) {
+
+            margin-left: 48px;
+        }
     }
 
     &__link {
         color: $white;
-        
+        display: block;
+        transition: all .5s;
     }
 
-    &__link:hover {
+    &__link:not(.header__link-active):hover {
         color: #ffc3a8;
         border-bottom: 1px solid #ffc3a8;
         padding-bottom: 5px;
+        transform: scale(1.1);
     }
 
     &__link-active {
@@ -196,11 +213,24 @@
 
 .watchOnline {
     background-image: url(../images/header-bg.jpg);
-    min-height: 780px;
+    max-height: 781px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
+    @media (max-width : $desctop) {
+
+        max-height: 584px;
+    }
+
+    & a.ovalBtn {
+        margin-bottom: 100px;
+
+        @media (max-width : $desctop) {
+            margin-right: 36px;
+        }
+
+    }
 
     &__span {
         color: $yellow;
@@ -212,6 +242,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media (max-width : $desctop) {
+            padding-left: 50%;
+            padding-top: 13%;
+        }
     }
 
     &__title {
@@ -222,9 +257,17 @@
         line-height: 75%;
         text-align: center;
         text-transform: uppercase;
-        padding-bottom: 60px;
+        padding-bottom: 68px;
         position: relative;
         z-index: 1;
+
+        @media (max-width : $desctop) {
+            font-size: 85px;
+            line-height: 63px;
+            padding-right: 30px;
+            padding-bottom: 42px;
+        }
+
     }
 
     &__title::before {
@@ -236,7 +279,14 @@
         height: 465px;
         z-index: -1;
         top: -70px;
-        left: -64px;
+        left: -72px;
+
+        @media (max-width : $desctop) {
+            width: 367px;
+            height: 367px;
+            top: -55px;
+            left: -37px;
+        }
     }
 
 }
@@ -246,19 +296,51 @@
     margin-top: 140px;
     position: relative;
 
+    @media (max-width : $desctop) {
+
+        margin-top: 108px;
+    }
+
     &__box {
         display: flex;
         justify-content: space-between;
     }
 
+    &__img-desctop {
+        display: none;
+    }
+
     &__img {
         margin-right: 87px;
         max-height: 403px;
+
+        @media (max-width : $desctop) {
+
+
+            &-main {
+                display: none;
+            }
+
+
+            &-desctop {
+                display: block;
+                max-width: 454px;
+                margin: 0 33px 0 19px;
+                max-height: 409px;
+            }
+
+
+        }
     }
 
     &__title {
         margin-bottom: 20px;
         @extend %Roboto-400;
+
+        @media (max-width : $desctop) {
+
+            margin-bottom: 9px;
+        }
     }
 
     &__subtitle {
@@ -273,7 +355,21 @@
     &-decor {
         position: absolute;
         right: 0;
-        top: -100px;
+        top: -128px;
+
+        @media (max-width : $desctop) {
+
+            display: none;
+        }
+    }
+
+    &__text {
+        max-width: 446px;
+
+        @media (max-width : $desctop) {
+
+            max-width: 439px;
+        }
     }
 
 }
@@ -286,11 +382,17 @@
     &__gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        /* grid-gap: 30px; */
-        margin-bottom: 79px;
+
+        margin-bottom: 80px;
         grid-column-gap: 30px;
         position: relative;
         grid-row-gap: 21px;
+
+        @media (max-width : $desctop) {
+            justify-items: end;
+            grid-row-gap: 86px;
+        }
+
     }
 
     &__gallery-item__title {
@@ -310,13 +412,15 @@
         position: relative;
         transition: opacity 3s;
     }
-    &__gallery-img__box:hover::before {
+
+    &__gallery-item:hover .pets__gallery-img__box::before {
         opacity: 1;
     }
+
     &__gallery-img__box::before {
         content: '';
         position: absolute;
-        background:rgba(0, 0, 0, 0.665);
+        background: rgba(0, 0, 0, 0.665);
         top: 0;
         left: 0;
         right: 0;
@@ -361,6 +465,7 @@
         color: #fff;
         transition: all 1s;
         z-index: 9999;
+        padding: 0 10px;
     }
 
     &__gallery-item__subtitle {
@@ -374,6 +479,11 @@
 
     &__btn {
         margin: 0 auto 100px;
+
+        @media (max-width : $desctop) {
+            margin: 0px auto 140px;
+        }
+
     }
 
     &__gallery-item::before {
@@ -420,13 +530,37 @@
     }
 
     &-decor-1 {
-        left: -8px;
+        left: 0px;
         bottom: -100px;
+
+        @media (max-width : $desctop) {
+
+            & {
+                display: none;
+            }
+
+            &--desctop {
+                display: block;
+                left: 0;
+                bottom: -139px;
+            }
+        }
+    }
+
+    &-decor-1--desctop {
+        display: none;
     }
 
     &-decor-2 {
-        right: -8px;
+        right: 0;
         bottom: -100px;
+
+        @media (max-width : $desctop) {
+            right: -17px;
+            bottom: -140px;
+            max-width: 241px;
+        }
+
     }
 
 
@@ -435,18 +569,31 @@
 
 .feedFriend {
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
-
     padding: 70px 0 100px;
+
+
+    @media (max-width : $desctop) {
+        padding: 31px 0 48px;
+    }
+
 
     &__box {
         border-radius: 20px;
         background: rgba(253, 253, 255, 0.52);
         backdrop-filter: blur(2px);
         padding-bottom: 60px;
+
+        @media (max-width : $desctop) {
+            padding-bottom: 0px;
+        }
     }
 
     &__info-box {
         margin-left: 100px;
+
+        @media (max-width : $desctop) {
+            margin-left: 69px;
+        }
     }
 
     &__title {
@@ -455,6 +602,12 @@
         @extend %Roboto-400;
         margin-bottom: 34px;
         text-align: center;
+
+        @media (max-width : $desctop) {
+            padding-top: 30px;
+            margin-bottom: 23px;
+        }
+
     }
 
     &__title-2 {
@@ -466,12 +619,21 @@
     &__subtitle {
         margin-bottom: 37px;
         letter-spacing: -0.3px;
+
+        @media (max-width : $desctop) {
+            margin-left: 0px;
+            margin-bottom: 18px;
+        }
     }
 
     &__text {
         @extend %Roboto-500;
         text-align: left;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+
+        @media (max-width : $desctop) {
+            margin-bottom: 6px;
+        }
     }
 
     &__text-2 {
@@ -479,6 +641,10 @@
         text-align: left;
         max-width: 863px;
         margin-bottom: 58px;
+
+        @media (max-width : $desctop) {
+            margin-bottom: 39px;
+        }
     }
 
     &__btn {
@@ -497,8 +663,20 @@
         position: relative;
     }
 
+    &__step:nth-child(-n+2)::after {
+        content: url(../images/peekFreind-arrow.svg);
+        position: absolute;
+        top: 30%;
+        right: -70px;
+    }
+
     &__step2 {
         margin: 0 -98px;
+
+        @media (max-width : $desctop) {
+            margin: 0px -32px 0 -18px;
+        }
+
     }
 
     &__step-img1 {
@@ -555,15 +733,16 @@
     &-bg {
         width: 100%;
         margin-bottom: 40px;
-
+        max-height: 386px;
     }
 
     &__pick {
-        margin-bottom: 21px;
+        margin-bottom: 24px;
+        padding-top: 37px;
     }
 
     &__title-donate {
-        letter-spacing: -2.1px;
+        letter-spacing: -1.6px;
         margin-bottom: 10px;
     }
 
@@ -574,8 +753,8 @@
     }
 
     &__text-donate {
-        text-shadow: 1px 1px black;
         margin-bottom: 46px;
+        max-width: 96%;
     }
 
     &__donation-title {
@@ -613,7 +792,7 @@
     &-number {
         font-size: 72px;
         line-height: 57px;
-
+        margin-bottom: 10px;
     }
 
 
@@ -756,13 +935,13 @@
 
     &__btn {
         border-radius: 5px;
-        margin-bottom: 180px;
+        margin-bottom: 177px;
     }
 
     &__decor {
         position: absolute;
         bottom: -312px;
-        right: -10px;
+        right: 0;
     }
 }
 
@@ -771,6 +950,7 @@
     background-color: #111115;
     padding: 38px 0 50px;
     color: $white;
+
 
     a {
         color: inherit;
@@ -884,10 +1064,16 @@
         border-radius: 3px;
     }
 
+    &__link {
+        display: block;
+        transition: all .5s;
+    }
+
     &__link:hover {
         color: #ffc3a8;
         border-bottom: 1px solid #ffc3a8;
         padding-bottom: 5px;
+        transform: scale(1.1);
     }
 
     &__form-btn {
@@ -921,6 +1107,10 @@
         color: green;
         transition: all .5s;
         cursor: pointer;
+    }
+
+    &__autor p:nth-child(2) {
+        margin-top: 15px;
     }
 }
 
@@ -1024,14 +1214,14 @@
     }
 
     &-radio__input:checked+.donate__form-input__label::after {
-        content: '';
+        content: "";
         position: absolute;
-        width: 12px;
-        height: 12px;
-        left: -21px;
-        top: 2px;
-        background: #FE9013;
-        border: 1px solid #FE9013;
+        width: 16px;
+        height: 16px;
+        left: -23px;
+        top: 0px;
+        background: #4B9200;
+        
         border-radius: 50%;
     }
 
@@ -1053,8 +1243,11 @@ input[type=number]::-webkit-outer-spin-button {
 .amount {
     margin-bottom: 24px;
 }
+
 input[type=number] {
     -moz-appearance: textfield;
 }
+
+
 
 @import "media";
