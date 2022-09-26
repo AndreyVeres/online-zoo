@@ -630,7 +630,7 @@
         @extend %Roboto-500;
         text-align: left;
         margin-bottom: 8px;
-
+        
         @media (max-width : $desctop) {
             margin-bottom: 6px;
         }
@@ -690,7 +690,7 @@
     }
 
     &__step::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 28px;
         bottom: 102px;
@@ -755,13 +755,17 @@
     &__text-donate {
         margin-bottom: 46px;
         max-width: 96%;
+        font-size: 16px !important;
+        // line-height: 22px;
     }
 
     &__donation-title {
         color: #FE9013;
         margin-bottom: 60px;
     }
-
+    &__donation-title span {
+        letter-spacing: 1.5px;
+    }
     &__box-donate {
         color: #333B41;
     }
