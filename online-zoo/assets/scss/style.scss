@@ -234,6 +234,7 @@
 
     &__span {
         color: $yellow;
+        letter-spacing: -5px;
     }
 
     &__box {
@@ -1040,7 +1041,7 @@
 
 
     &__form-email__input::placeholder {
-        padding: 10px 7px 10px 10px;
+        padding: 10px 7px 10px 0px;
     }
 
     &__form-email__label-inactive::before {

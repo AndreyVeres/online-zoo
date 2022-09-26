@@ -113,6 +113,10 @@ body {
   line-height: 140%;
 }
 
+.once {
+  margin-left: 18px;
+}
+
 .ovalBtn {
   width: 298px;
   height: 54px;
@@ -416,6 +420,7 @@ body {
 }
 .watchOnline__span {
   color: #FFEE2E;
+  letter-spacing: -5px;
 }
 .watchOnline__box {
   padding-left: 57%;
@@ -1073,13 +1078,13 @@ body {
   color: red;
 }
 .footer__form-email__input::-moz-placeholder {
-  padding: 10px 7px 10px 10px;
+  padding: 10px 7px 10px 0px;
 }
 .footer__form-email__input:-ms-input-placeholder {
-  padding: 10px 7px 10px 10px;
+  padding: 10px 7px 10px 0px;
 }
 .footer__form-email__input::placeholder {
-  padding: 10px 7px 10px 10px;
+  padding: 10px 7px 10px 0px;
 }
 .footer__form-email__label-inactive::before {
   content: "";
