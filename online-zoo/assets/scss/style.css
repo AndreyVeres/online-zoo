@@ -898,6 +898,7 @@ body {
 }
 .testimonials__title {
   padding: 139px 0 32px;
+  letter-spacing: 1.1px;
   text-align: center;
 }
 .testimonials__item {
@@ -908,7 +909,7 @@ body {
   border-radius: 20px;
   display: inline-block;
   white-space: normal;
-  margin: 15px 11px;
+  margin: 15px 0px;
   height: 388px;
 }
 .testimonials__item::before {
@@ -946,6 +947,8 @@ body {
 .testimonials__box {
   white-space: nowrap;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 .testimonials input[type=range] {
   -webkit-appearance: none;
