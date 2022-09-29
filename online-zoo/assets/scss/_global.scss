@@ -11,31 +11,10 @@ body {
 }
 
 .once {
-    margin-left: 18px;  
+    margin-left: 18px;
 }
 
-// .testimonials__box::-webkit-scrollbar {
-//     color: red;
-//     height: 6px;
-//     width: 10;
-// }
 
-// .testimonials__box::-webkit-scrollbar-track {
-    
-  
-// }
-
-// .testimonials__box::-webkit-scrollbar-track::before {
-//     background-color: #fff;
- 
-// }
-
-
-// .testimonials__box::-webkit-scrollbar-thumb {
-//     background-color: red;
-//     height: 5px;
-//     border-radius: 20px;
-// }
 
 .ovalBtn {
     width: 298px;
@@ -51,9 +30,7 @@ body {
 }
 
 
-.rectBtn {
-    
-}
+
 .ovalBtn:hover {
     background: linear-gradient(113.96deg, #d86f42 1.49%, #da7c11 101.44%);
 }
@@ -61,16 +38,16 @@ body {
 
 .arrow {
     position: absolute;
-    z-index: 5;
-    top: calc(50% - 35px);
-    cursor: pointer;
-    border: 0;
+    top: 41%;
+    z-index: 99;
     background: transparent;
+
+
 
 }
 
 .arrow-active svg circle {
-    
+
     fill: green;
     transform: translate(0) !important;
     cursor: default;
@@ -82,17 +59,12 @@ body {
 
 
 .arrow__left {
-    left: -88px;
-    @media (max-width : $desctop) {
-      left: 337px;
-    }
+    left: 0;
 }
 
 .arrow__right {
-    right: -88px;
-    @media (max-width : $desctop) {
-        right: 318px;
-      }
+    right: 0;
+
 }
 
 
@@ -126,15 +98,16 @@ body {
 .arrow__left svg circle {
     transition: all 1s;
 }
+
 .arrow__left svg:hover {
-    transform: translate(4px , 0);
+    transform: translate(4px, 0);
 }
 
-.arrow__left svg:hover  circle{
+.arrow__left svg:hover circle {
     transform: translate(68px, 0px);
 }
 
-.arrow__left svg:hover  path {
+.arrow__left svg:hover path {
     // transform: scale(2) translate(-25px, -15px);
     stroke: #d86f42;
     transition: all 1s;
@@ -146,19 +119,19 @@ body {
 .arrow__right svg circle {
     transition: all 1s;
 }
+
 .arrow__right svg:hover {
-    transform: translate(4px , 0);
- 
+    transform: translate(4px, 0);
+
 }
 
-.arrow__right svg:hover  circle{
+.arrow__right svg:hover circle {
     transform: translate(-68px, 0px);
 }
 
-.arrow__right svg:hover  path {
+.arrow__right svg:hover path {
     // transform: scale(2) translate(-25px, -15px);
     stroke: #d86f42;
     transition: all 1s;
-    transform: scale(2) translate(-9px,-15px);
+    transform: scale(2) translate(-9px, -15px);
 }
-

@@ -54,3 +54,42 @@ arrows.forEach(arrow => {
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function kubik (face , kubs , num){
+//     let kub = new Array(kubs).fill(1)
+//     kub[0] = 0;
+//     let i = 0;
+//     while (kub[kubs]<=face){
+//         kub[0]++;
+//     }
+
+// }
+
+
+// console.log(kubik(12 , 3 , 15))
+
+
+
+
+
+
+
+
+
+
+
+
