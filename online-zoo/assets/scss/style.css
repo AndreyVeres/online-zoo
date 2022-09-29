@@ -825,6 +825,8 @@ body {
 
 .feedFriend__title-donate {
   color: #ffffff;
+   letter-spacing: -2px;
+  margin-bottom: 10px;
 }
 .feedFriend-bg {
   width: 100%;
