@@ -1204,7 +1204,7 @@
     color: #767474;
 
     &__title {
-        padding: 139px 0 32px;
+        padding: 139px 0 35px;
         letter-spacing: 1.1px;
         text-align: center;
 
@@ -1488,7 +1488,7 @@
     &__form-email__label-inactive::before {
         content: "";
         position: absolute;
-        top: -7px;
+        top: -8px;
         right: 8px;
         bottom: -9px;
         left: 9px;
@@ -1501,7 +1501,7 @@
     &__form-email__label-focused::before {
         content: "";
         position: absolute;
-        top: -7px;
+        top: -8px;
         right: 8px;
         bottom: -9px;
         left: 9px;
