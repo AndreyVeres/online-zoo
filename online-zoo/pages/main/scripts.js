@@ -1,3 +1,15 @@
+
+import donateDots from "../../assets/js/donateDots.js";
+import popup from "../../assets/js/popup.js";
+try{
+    donateDots()
+   
+}catch{}
+
+
+try{
+    popup('.testimonials__item' , '.popup__wrapper' , '.popup' , '.popup__close')
+}catch{}
 const formInput = document.querySelector('.footer__form-email__input')
 const label = document.querySelector('.footer__form-email__label');
 const form = document.querySelector('.footer__form')

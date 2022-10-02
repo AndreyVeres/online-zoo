@@ -38,12 +38,28 @@ body {
 
 .arrow {
     position: absolute;
-    top: 41%;
+    top: 42%;
     z-index: 99;
     background: transparent;
 
 
+    @media(max-width : 1000px){
+        top: 41.5%;
+    } 
 
+    @media(max-width : 850px){
+        top: 40.5%;
+    }
+    @media(max-width : 700px){
+        top: 39.5%;
+    }
+    @media(max-width : 640px){
+        top: 42%;
+    }
+
+    @media(max-width : 600px){
+        display: none;
+    }
 }
 
 .arrow-active svg circle {
@@ -59,12 +75,32 @@ body {
 
 
 .arrow__left {
-    left: 0;
+    left: -88px;
+
+    @media(max-width: 1355px){
+        left: 35%;
+    }
+    @media(max-width: 1000px){
+        left: 34.5%;
+    }
+
+    @media(max-width: 640px){
+        left: 36.5%;
+    }
 }
 
 .arrow__right {
-    right: 0;
+    right: -88px;
+    @media(max-width: 1355px){
+        right: 35%;
+    }
+    @media(max-width: 1000px){
+        right: 34.5%;
+    }
 
+    @media(max-width: 640px){
+        right: 36.5%;
+    }
 }
 
 
