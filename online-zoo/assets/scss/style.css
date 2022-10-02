@@ -1028,7 +1028,7 @@ body {
   }
 }
 .theBackstage__text {
-  
+  max-width: 446px;
 }
 @media (max-width: 1001px) {
   .theBackstage__text {
@@ -1772,7 +1772,6 @@ body {
 .feedFriend {
   color: #333B41;
 }
-
 @media (max-width: 640px) {
   .feedFriend__info-box-donate {
     margin-left: 0;
@@ -1782,12 +1781,6 @@ body {
   .feedFriend__info-box-donate {
     margin-left: 0px;
   }
-
-.feedFriend__title-donate {
-  color: #ffffff;
-   letter-spacing: -2px;
-  margin-bottom: 10px;
-
 }
 .feedFriend-bg {
   width: 100%;
@@ -1878,7 +1871,7 @@ body {
   }
 }
 .feedFriend__title-donate {
-  letter-spacing: -2px;
+  letter-spacing: -1.6px;
   margin-bottom: 10px;
 }
 @media (max-width: 1000px) {
