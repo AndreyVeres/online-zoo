@@ -1,7 +1,7 @@
 
 import donateDots from "../../assets/js/donateDots.js";
 import popup from "../../assets/js/popup.js";
-import rewievCarousel from "../../assets/js/rewievCarousel.js";
+// import rewievCarousel from "../../assets/js/rewievCarousel.js";
 try{
     donateDots()
    
@@ -11,7 +11,7 @@ try{
     popup('.testimonials__item' , '.popup__wrapper' , '.popup' , '.popup__close')
 }catch{}
 
-rewievCarousel()
+// rewievCarousel()
 const formInput = document.querySelector('.footer__form-email__input')
 const label = document.querySelector('.footer__form-email__label');
 const form = document.querySelector('.footer__form')

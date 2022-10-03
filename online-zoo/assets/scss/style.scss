@@ -381,6 +381,9 @@
 
 .header.header__donate {
     position: static;
+    @media(max-width : 640px){
+        position: fixed;
+    }
 }
 
 .logo {
@@ -1887,9 +1890,9 @@
     color: #767474;
 
 
-    &__box-viewport{
-        overflow: hidden;
-    }
+    // &__box-viewport{
+    //     overflow: hidden;
+    // }
     &__title {
         padding: 139px 0 35px;
         letter-spacing: 1.1px;
@@ -2010,7 +2013,7 @@
         display: flex;
         gap: 15px;
         overflow: hidden;
-        width: 279%;
+        // width: 279%;
         @media(max-width : 1000px) {
             gap: 0;
             margin-bottom: 7px;
