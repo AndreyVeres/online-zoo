@@ -2092,6 +2092,9 @@ body {
   position: relative;
   color: #767474;
 }
+.testimonials__box-viewport {
+  overflow: hidden;
+}
 .testimonials__title {
   padding: 139px 0 35px;
   letter-spacing: 1.1px;
@@ -2202,6 +2205,7 @@ body {
   display: flex;
   gap: 15px;
   overflow: hidden;
+  width: 279%;
 }
 @media (max-width: 1000px) {
   .testimonials__box {
