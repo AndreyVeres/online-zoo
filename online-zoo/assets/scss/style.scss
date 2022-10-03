@@ -248,9 +248,13 @@
         z-index: 99;
     }
 
+    @media(max-width : 778px){
+        position: fixed;
+    }
     @media (max-width : $tablet) {
         font-size: 12px;
         line-height: 14px;
+        
     }
 
     @media (max-width : $mobile) {

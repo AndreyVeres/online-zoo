@@ -510,6 +510,11 @@ body {
     z-index: 99;
   }
 }
+@media (max-width: 778px) {
+  .header {
+    position: fixed;
+  }
+}
 @media (max-width: 640px) {
   .header {
     font-size: 12px;
