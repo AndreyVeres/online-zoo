@@ -621,6 +621,11 @@ body {
 .header.header__donate {
   position: static;
 }
+@media (max-width: 640px) {
+  .header.header__donate {
+    position: fixed;
+  }
+}
 
 .logo {
   padding: 3px 4px;
