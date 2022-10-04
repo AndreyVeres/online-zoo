@@ -620,6 +620,7 @@ body {
 
 .header.header__donate {
   position: static;
+  top: 0;
 }
 @media (max-width: 640px) {
   .header.header__donate {
@@ -1823,6 +1824,7 @@ body {
   .feedFriend-bg-640 {
     display: block;
     margin-bottom: 31px;
+    margin-top: 34px;
   }
 }
 @media (max-width: 320px) {
@@ -1837,6 +1839,7 @@ body {
   .feedFriend-bg-320 {
     display: block;
     margin-bottom: 33px;
+    margin-top: 32px;
   }
 }
 @media (max-width: 1000px) {
