@@ -3,20 +3,14 @@ const rewievCarousel = () => {
     const track = document.querySelector('.testimonials__box');
     const itemWidth = document.querySelector('.testimonials__item').clientWidth
 
-    // window.addEventListener('resize', () => {
-    //     track.style.width = `${itemWidth * 12}px`
-    // })
-
     function moveTrack(e) {
-
         let range = e.currentTarget.value
+        let itemWidth = document.querySelector('.testimonials__item').clientWidth
         if (window.innerWidth > 1000) {
-            let itemWidth = document.querySelector('.testimonials__item').clientWidth
             track.style.transform = `translateX(${(-itemWidth * range) - (38 * range)}px)`
             line.max = 7
         }
-        if (window.innerWidth <= 1000) {
-            let itemWidth = document.querySelector('.testimonials__item').clientWidth
+        if (window.innerWidth <= 1000) { 
             line.max = 8
             track.style.transform = `translateX(${(-itemWidth * range) - (22 * range)}px)`
         }
