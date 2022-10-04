@@ -1,17 +1,17 @@
 
 import donateDots from "../../assets/js/donateDots.js";
 import popup from "../../assets/js/popup.js";
-// import rewievCarousel from "../../assets/js/rewievCarousel.js";
-try{
+import rewievCarousel from "../../assets/js/rewievCarousel.js";
+try {
     donateDots()
-   
-}catch{}
 
-try{
-    popup('.testimonials__item' , '.popup__wrapper' , '.popup' , '.popup__close')
-}catch{}
+} catch { }
 
-// rewievCarousel()
+try {
+    popup('.testimonials__item', '.popup__wrapper', '.popup', '.popup__close')
+} catch { }
+
+rewievCarousel()
 const formInput = document.querySelector('.footer__form-email__input')
 const label = document.querySelector('.footer__form-email__label');
 const form = document.querySelector('.footer__form')
@@ -66,8 +66,6 @@ arrows.forEach(arrow => {
     })
 
 })
-
-
 
 
 

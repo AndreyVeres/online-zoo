@@ -1890,9 +1890,15 @@
     color: #767474;
 
 
-    // &__box-viewport{
-    //     overflow: hidden;
-    // }
+    &__box-viewport{
+        overflow: hidden;
+        // min-width: 100%;
+        
+        // @media(max-width : 1174px){
+        //     max-width: 1014px;
+        //     margin: 0 auto;
+        // }
+    }
     &__title {
         padding: 139px 0 35px;
         letter-spacing: 1.1px;
@@ -1920,18 +1926,21 @@
 
     &__item {
         background: #fff;
-        width: 267px;
+        // width: 267px;
         padding: 16px 15px 17px 16px;
         position: relative;
         border-radius: 20px;
         display: inline-block;
         white-space: normal;
-        flex-basis: 25%;
+     
         margin: 15px 11px;
         cursor: pointer;
-        @media (max-width : $desctop) {
-            flex-basis: 33%;
-            margin: 14px 20px;
+        flex-basis: 6.1%;
+     
+        @media (max-width : 1170px) {
+          
+            flex-basis: 8.5%;
+         
 
         }
 
@@ -1955,11 +1964,11 @@
     }
 
 
-    &__item:nth-child(2) {
-        @media (max-width : 1000px) {
-            display: none;
-        }
-    }
+    // &__item:nth-child(2) {
+    //     @media (max-width : 1000px) {
+    //         display: none;
+    //     }
+    // }
 
 
 
@@ -2012,8 +2021,14 @@
         margin-bottom: 10px;
         display: flex;
         gap: 15px;
-        overflow: hidden;
+        // overflow: hidden;
         // width: 279%;
+        width: 366%;
+        transition: all 2s;
+
+        // @media(max-width : 1140px){
+        //     gap: 10px;
+        // }
         @media(max-width : 1000px) {
             gap: 0;
             margin-bottom: 7px;
@@ -2035,10 +2050,12 @@
         margin: 0 auto 32px;
         cursor: pointer;
 
+        
 
         @media (max-width : $desctop) {
             width: 390px;
             margin: 0 auto 52px;
+            
         }
 
         @media (max-width : 640px) {
