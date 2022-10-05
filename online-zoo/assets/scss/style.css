@@ -1103,6 +1103,7 @@ body {
   }
 }
 .pets__gallery {
+  transition: all 2.5s;
   margin-bottom: 79px;
   justify-content: center;
   max-width: 1591px;
@@ -1115,6 +1116,7 @@ body {
 @media (max-width: 1355px) {
   .pets__gallery {
     gap: 90px 30px;
+    max-height: 950px;
   }
 }
 @media (max-width: 1000px) {
