@@ -1103,12 +1103,14 @@ body {
   }
 }
 .pets__gallery {
-  margin-bottom: 86px;
+  margin-bottom: 79px;
   justify-content: center;
   max-width: 1591px;
   display: flex;
   flex-wrap: wrap;
-  gap: 29px 37px;
+  gap: 20px 27px;
+  max-height: 902px;
+  flex-direction: column;
 }
 @media (max-width: 1355px) {
   .pets__gallery {
@@ -1143,7 +1145,6 @@ body {
 .pets__gallery-box {
   overflow: hidden;
   position: relative;
-  padding: 0 1px;
 }
 .pets__gallery-item__title {
   text-transform: uppercase;
@@ -1165,6 +1166,7 @@ body {
   position: relative;
   cursor: pointer;
   flex-basis: 31%;
+  padding: 1px;
 }
 @media (max-width: 1000px) {
   .pets__gallery-item {
