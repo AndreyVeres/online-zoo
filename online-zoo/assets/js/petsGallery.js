@@ -4,8 +4,7 @@ const petsGallery = () => {
     const leftArrow = document.querySelector('.arrow__left')
     const rightArrow = document.querySelector('.arrow__right')
     const gallery = document.querySelector('.pets__gallery')
-
-
+    
     let maxItemsInRow = null;
     if (window.innerWidth >= 1000) {
         maxItemsInRow = 6
