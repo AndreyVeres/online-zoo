@@ -1103,7 +1103,6 @@ body {
   }
 }
 .pets__gallery {
-  transition: all 2.5s;
   margin-bottom: 79px;
   justify-content: center;
   max-width: 1591px;

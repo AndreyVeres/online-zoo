@@ -4,15 +4,15 @@ const petsGallery = (maxItems) => {
     const leftArrow = document.querySelector('.arrow__left')
     const rightArrow = document.querySelector('.arrow__right')
     const gallery = document.querySelector('.pets__gallery')
-   
+
     init()
     let maxItemsInRow = null;
-    if(window.innerWidth >= 1000){
+    if (window.innerWidth >= 1000) {
         maxItemsInRow = 6
-    }else if(window.innerWidth <= 640){
+    } else if (window.innerWidth <= 640) {
         maxItemsInRow = 4;
     }
-     
+
     function initialRender() {
         const item = itemsToRender.splice(
             randomInteger(0, itemsToRender.length - 1), 1)
@@ -42,25 +42,57 @@ const petsGallery = (maxItems) => {
                 randomInteger(0, itemsToRender.length - 1), 1)
             gallery.append(newItem[0])
         }
-        // размер гапа у галери = 80
-       
+        let gap = (document.querySelector('.pets__gallery-box').clientWidth - (itemWidth * (maxItemsInRow / 2))) / 2
 
-        let gap =  (document.querySelector('.pets__gallery-box').clientWidth - (itemWidth * (maxItemsInRow / 2))) / 2
-        console.log(gap)
-        gallery.style.transition = '2.5s'
+        gallery.style.transition = '1s'
         gallery.style.transform += `translateX(-${itemWidth * (maxItemsInRow / 2) + (gap * (maxItemsInRow / 2))}px)`
-        let oldElements = Array.from(document.querySelectorAll('.pets__gallery-item')).splice(0 , maxItemsInRow)
-        
+        let oldElements = Array.from(document.querySelectorAll('.pets__gallery-item')).splice(0, maxItemsInRow)
+
         itemsToRender.push(...oldElements)
         setTimeout(() => {
             rightArrow.disabled = false;
             oldElements.forEach(item => item.remove())
             gallery.style.transition = 'none'
-            gallery.style.transform = `translateX(${0}px)`
-        }, 3000);
-      
+            gallery.style.transform = ``
+        }, 1000);
+
     }
     rightArrow.addEventListener('click', moveRight)
+
+    function moveLeft() {
+        gallery.transition = 'none'
+        const itemWidth = document.querySelector('.pets__gallery-item').clientWidth;
+        leftArrow.disabled = true
+        let gap = (document.querySelector('.pets__gallery-box').clientWidth - (itemWidth * (maxItemsInRow / 2))) / 2
+
+        gallery.style.transform = `translateX(-${itemWidth * (maxItemsInRow / 2) + (gap * (maxItemsInRow / 2))}px)`
+
+
+        for (let i = 0; i < maxItemsInRow; i++) {
+            let newItem = itemsToRender.splice(
+                randomInteger(0, itemsToRender.length - 1), 1)
+            gallery.prepend(newItem[0])
+        }
+        setTimeout(() => {
+            gallery.style.transition = '1s'
+            gallery.style.transform = ``
+            
+        }, 0);
+
+
+        let oldElements = Array.from(document.querySelectorAll('.pets__gallery-item')).slice(maxItemsInRow)
+
+        itemsToRender.push(...oldElements)
+        setTimeout(() => {
+            leftArrow.disabled = false;
+            gallery.style.transition = 'none'
+            
+            oldElements.forEach(item => item.remove())
+
+        }, 1000);
+
+    }
+    leftArrow.addEventListener('click', moveLeft)
 }
 
 export default petsGallery;
