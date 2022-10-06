@@ -1,16 +1,28 @@
-const petsGallery = (maxItems) => {
+const petsGallery = () => {
     let itemsToRender = [];
     let allitems = document.querySelectorAll('.pets__gallery-item');
     const leftArrow = document.querySelector('.arrow__left')
     const rightArrow = document.querySelector('.arrow__right')
     const gallery = document.querySelector('.pets__gallery')
 
-    init()
+
     let maxItemsInRow = null;
     if (window.innerWidth >= 1000) {
         maxItemsInRow = 6
     } else if (window.innerWidth <= 640) {
         maxItemsInRow = 4;
+    }
+    init()
+    function calculateGap(itemWidth) {
+        let gap = 0
+        if (maxItemsInRow === 6) gap = (document.querySelector('.pets__gallery-box').clientWidth - (itemWidth * (maxItemsInRow / 2))) / 2
+        else gap = (document.querySelector('.pets__gallery-box').clientWidth - (itemWidth * (maxItemsInRow / 2)))
+        return gap
+    }
+    function renderStartedItems() {
+        for (let i = 0; i < maxItemsInRow; i++) {
+            initialRender()
+        }
     }
 
     function initialRender() {
@@ -23,12 +35,9 @@ const petsGallery = (maxItems) => {
             itemsToRender.push(item)
             item.remove()
         })
-        initialRender()
-        initialRender()
-        initialRender()
-        initialRender()
-        initialRender()
-        initialRender()
+
+        renderStartedItems()
+
     }
     function randomInteger(min, max) {
         let rand = min - 0.5 + Math.random() * (max - min + 1);
@@ -42,8 +51,8 @@ const petsGallery = (maxItems) => {
                 randomInteger(0, itemsToRender.length - 1), 1)
             gallery.append(newItem[0])
         }
-        let gap = (document.querySelector('.pets__gallery-box').clientWidth - (itemWidth * (maxItemsInRow / 2))) / 2
-
+        let gap = calculateGap(itemWidth);
+      
         gallery.style.transition = '1s'
         gallery.style.transform += `translateX(-${itemWidth * (maxItemsInRow / 2) + (gap * (maxItemsInRow / 2))}px)`
         let oldElements = Array.from(document.querySelectorAll('.pets__gallery-item')).splice(0, maxItemsInRow)
@@ -63,10 +72,8 @@ const petsGallery = (maxItems) => {
         gallery.transition = 'none'
         const itemWidth = document.querySelector('.pets__gallery-item').clientWidth;
         leftArrow.disabled = true
-        let gap = (document.querySelector('.pets__gallery-box').clientWidth - (itemWidth * (maxItemsInRow / 2))) / 2
-
+        let gap = calculateGap(itemWidth)
         gallery.style.transform = `translateX(-${itemWidth * (maxItemsInRow / 2) + (gap * (maxItemsInRow / 2))}px)`
-
 
         for (let i = 0; i < maxItemsInRow; i++) {
             let newItem = itemsToRender.splice(
@@ -76,7 +83,7 @@ const petsGallery = (maxItems) => {
         setTimeout(() => {
             gallery.style.transition = '1s'
             gallery.style.transform = ``
-            
+
         }, 0);
 
 
@@ -86,7 +93,7 @@ const petsGallery = (maxItems) => {
         setTimeout(() => {
             leftArrow.disabled = false;
             gallery.style.transition = 'none'
-            
+            gallery.style.transform = ``
             oldElements.forEach(item => item.remove())
 
         }, 1000);
