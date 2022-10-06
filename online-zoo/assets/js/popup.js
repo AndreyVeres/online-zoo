@@ -25,7 +25,7 @@ const popup = (itemSelector, popupWrap, popupWindow, closeSelector) => {
     function openPopup(item) {
         const cloneItem = item.cloneNode(true);
         cloneItem.classList.add('popup__item')
-
+       cloneItem.lastElementChild.classList.add('popup__text')
         popupWrapper.append(cloneItem)
         popup.style.visibility = 'visible'
         popup.style.opacity = '1'
