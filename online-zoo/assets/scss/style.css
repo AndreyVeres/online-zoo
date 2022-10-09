@@ -1137,10 +1137,6 @@ body {
     margin-top: 18px;
   }
 }
-.pets__gallery-item__img {
-  width: 366px;
-  height: 366px;
-}
 .pets__gallery {
   margin-bottom: 79px;
   justify-content: center;
