@@ -443,6 +443,7 @@
 }
 
 .header.header__donate {
+    top: 0;
     position: static;
     top: 0;
 
@@ -646,7 +647,7 @@
             line-height: 21px;
             // max-width: 107px;
             max-width: 114px;
-            margin: 42px 12px 0 0;
+            margin: 42px 5px 0 0;
         }
     }
 
@@ -1724,7 +1725,11 @@
         @media(max-width : 320px) {
             display: block;
             margin-bottom: 33px;
+
             margin-top: 32px;
+
+          
+
         }
     }
 
@@ -1750,6 +1755,7 @@
         @media(max-width : 1000px) {
             margin-bottom: 12px;
             padding-top: 19px;
+            margin-right: 12px;
         }
 
         @media(max-width : 640px) {
@@ -1806,8 +1812,8 @@
     }
 
     &__text-donate {
+        @extend %Roboto-400;
         margin-bottom: 46px;
-        max-width: 96%;
         font-size: 16px;
 
         // line-height: 22px;
@@ -1937,7 +1943,8 @@
         margin-left: -50px;
 
         @media(max-width : 1000px) {
-            margin-left: 56px;
+            margin-left: 48px;
+            letter-spacing: -0.2px;
         }
 
         @media(max-width : 640px) {

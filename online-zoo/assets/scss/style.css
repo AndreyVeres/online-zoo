@@ -3,7 +3,7 @@
   font-weight: 700;
 }
 
-.feedFriend__text-2, .feedFriend__title-2, .feedFriend__title, .theBackstage__title, .logo__title,
+.feedFriend__text-donate, .feedFriend__text-2, .feedFriend__title-2, .feedFriend__title, .theBackstage__title, .logo__title,
 .logo .logo__subtitle, .h3__title, .h2__title, body {
   font-family: "Roboto-Regular", sans-serif;
   font-weight: 400;
@@ -657,6 +657,7 @@ body {
 }
 
 .header.header__donate {
+  top: 0;
   position: static;
   top: 0;
 }
@@ -853,7 +854,7 @@ body {
     font-size: 27px;
     line-height: 21px;
     max-width: 114px;
-    margin: 42px 12px 0 0;
+    margin: 42px 5px 0 0;
   }
 }
 .watchOnline__title::before {
@@ -1901,7 +1902,8 @@ body {
   .feedFriend-bg-320 {
     display: block;
     margin-bottom: 33px;
-    margin-top: 32px;
+
+    margin-top: 34px;
   }
 }
 @media (max-width: 1000px) {
@@ -1927,6 +1929,7 @@ body {
   .feedFriend__pick {
     margin-bottom: 12px;
     padding-top: 19px;
+    margin-right: 12px;
   }
 }
 @media (max-width: 640px) {
@@ -1985,7 +1988,6 @@ body {
 }
 .feedFriend__text-donate {
   margin-bottom: 46px;
-  max-width: 96%;
   font-size: 16px;
 }
 @media (max-width: 640px) {
@@ -2114,7 +2116,8 @@ body {
 }
 @media (max-width: 1000px) {
   .feedFriend__subtitle-donate {
-    margin-left: 56px;
+    margin-left: 48px;
+    letter-spacing: -0.2px;
   }
 }
 @media (max-width: 640px) {
