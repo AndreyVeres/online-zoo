@@ -27,7 +27,6 @@ const donateDots = () => {
         let target = e.target;
         if(target.classList.contains('scale__circle')){
             clearDots()
-            console.dir(target)
             target.classList.add('scale__circle-active')
             target.nextElementSibling.classList.add('scale__price--active')
             input.value = target.nextElementSibling.textContent.slice(1)
